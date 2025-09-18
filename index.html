@@ -108,16 +108,6 @@
             margin-top: 40px;
             border-radius: 15px;
         }
-        .future-vision h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            border: none;
-            color: white;
-        }
-        .future-vision p {
-            font-size: 1.3em;
-            line-height: 1.8;
-        }
         .partnership {
             background: #e3f2fd;
             padding: 20px;
@@ -129,6 +119,14 @@
             color: #e74c3c;
             font-weight: bold;
             font-size: 1.1em;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse-text {
+            animation: pulse 2s infinite;
         }
     </style>
 </head>
@@ -355,7 +353,11 @@
             </div>
         </div>
 
-
+        <div class="future-vision">
+            <h2 style="font-size: 2.8em; margin-bottom: 25px; border: none; color: white;">🔥 どうだ？みんな。</h2>
+            <p style="font-size: 2em; font-weight: bold; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); line-height: 1.4; margin-bottom: 30px;">100億やれそうな気がしてきただろ？</p>
+            <p class="pulse-text" style="font-size: 2.2em; font-weight: bold; margin-top: 30px;">さあやろうぜ。</p>
+        </div>
     </div>
 </body>
 </html>
