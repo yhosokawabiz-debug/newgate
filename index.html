@@ -168,25 +168,6 @@
             text-align: center;
         }
 
-        .final-message {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin: 40px 0;
-            font-size: 1.4em;
-            font-weight: bold;
-            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
         .highlight {
             background: #fffbf0;
             padding: 20px;
@@ -219,6 +200,46 @@
             font-size: 2em;
             color: #3498db;
             margin: 0 10px;
+        }
+
+        .detailed-box {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #34495e;
+        }
+
+        .note-box {
+            background: #d5dbdb;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        .service-flow {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 2px solid #27ae60;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .metric-item {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -256,7 +277,7 @@
         </div>
 
         <div class="current-status">
-            <h2 style="margin-bottom: 15px;">🎯 現状と目標</h2>
+            <h2 style="margin-bottom: 15px;">🎯 現状と成長ロードマップ</h2>
             <div class="growth-path">
                 <div class="growth-step">
                     <div>現在</div>
@@ -265,18 +286,34 @@
                 </div>
                 <div class="arrow">→</div>
                 <div class="growth-step">
-                    <div>第一目標</div>
+                    <div>第1フェーズ</div>
                     <div style="font-size: 1.5em;">30億円</div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="growth-step">
-                    <div>中期目標</div>
+                    <div>第2フェーズ</div>
                     <div style="font-size: 1.5em;">50億円</div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="growth-step">
-                    <div>最終目標</div>
-                    <div style="font-size: 2em; color: #e74c3c;">100億円</div>
+                    <div>第3フェーズ</div>
+                    <div style="font-size: 1.5em;">100億円</div>
+                </div>
+            </div>
+            <div class="growth-path" style="margin-top: 20px;">
+                <div class="growth-step" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                    <div>その先へ</div>
+                    <div style="font-size: 1.3em;">300億円</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="growth-step" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <div>さらなる飛躍</div>
+                    <div style="font-size: 1.3em;">500億円</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="growth-step" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); color: white;">
+                    <div style="font-weight: bold;">最終目標</div>
+                    <div style="font-size: 2em; font-weight: bold;">1000億円</div>
                 </div>
             </div>
         </div>
@@ -289,6 +326,10 @@
                 <li>③ <strong>シェアモビリティメンテナンス</strong></li>
                 <li>④ <strong>ハウスクリーニング</strong></li>
             </ul>
+            <div class="detailed-box">
+                <p><strong>子会社のネオを含めてグループ年商13億円を達成</strong></p>
+                <p>ここからまずは30億まで駆け抜ける計画</p>
+            </div>
         </div>
 
         <div class="section">
@@ -298,18 +339,37 @@
             
             <div class="partnership-box">
                 <strong>📝 HFT社（ハンズフリートラベル社）との資本業務提携</strong><br>
-                「フリーゴー」空港配送サービスの物流を包括的にマネジメント
+                物流関係を包括的にマネージメント
             </div>
 
-            <div class="highlight">
-                <h4>📱 サービスの仕組み</h4>
-                <p>1. インバウンドユーザーがアプリ・ブラウザで登録（メール、パスポート、帰り便情報）</p>
-                <p>2. マイQRコード付与</p>
-                <p>3. 導入店舗でQRをかざして荷物預託</p>
-                <p>4. 帰り便4時間前から空港カウンターで受け取り</p>
+            <div class="service-flow">
+                <h4>📱 フリーゴー空港配送サービス仕組み</h4>
+                <p><strong>1. 事前登録</strong></p>
+                <p>インバウンドユーザーがフリーゴーのアプリもしくはブラウザで登録</p>
+                <ul style="margin-left: 20px;">
+                    <li>メールアドレス</li>
+                    <li>パスポート情報</li>
+                    <li>帰り便情報</li>
+                </ul>
+                <p><strong>2. マイQRコード付与</strong></p>
+                <p><strong>3. 店舗での預託</strong></p>
+                <p>導入店舗でマイQRをかざすだけで伝票が出力され、荷物を預けて手ぶらで店を出れる</p>
+                <p><strong>4. 空港での受取</strong></p>
+                <p>帰り便の4時間前から各カウンターで受け取り可能</p>
+                <div style="margin-top: 15px;">
+                    <strong>🛫 受取カウンター</strong>
+                    <ul style="margin-left: 20px;">
+                        <li>JALエービーシーカウンター</li>
+                        <li>コウノイケエアポートサービスカウンター</li>
+                        <li>各空港内ドンキホーテ店舗（ドンキユーザーのみ）</li>
+                    </ul>
+                </div>
+                <div class="note-box">
+                    <strong>※サービス条件：</strong>受付時に帰り便出発時刻まで50時間以上の方へ、最短2日後に受け取り可能なサービスとしてローンチ
+                </div>
             </div>
 
-            <h4>🏪 導入店舗（10月展開予定）</h4>
+            <h4>🏪 10月導入予定店舗（東京都心部）</h4>
             <div class="store-list">
                 <div class="store-item">ドンキ渋谷本店</div>
                 <div class="store-item">ドンキ銀座本館</div>
@@ -320,23 +380,54 @@
 
             <div class="calculation">
                 <p><strong>📊 売上想定（ドンキのみ）</strong></p>
-                <p>東京：1,200件/日 × 関西：1,300件/日 = 合計2,500件/日</p>
-                <p>受託料金：900円（税別）/件</p>
+                <p>免税カウンターのPOSレジデータ上で、レジ通過7.5％が利用想定</p>
+                <p>東京：1,200件/日</p>
+                <p>関西方面5店舗年内導入予定（大阪の方がインバウンドユーザー多数）</p>
+                <p>東西合計：2,500件/日</p>
+                <p>YCT受託料金：900円（税別）/件</p>
                 <p><span style="font-size: 1.3em; color: #e74c3c;">月間売上：6,500〜7,000万円</span></p>
                 <p><span style="font-size: 1.5em; color: #c0392b;">年間売上：8〜10億円の可能性！</span></p>
             </div>
 
-            <h4>🎯 今後の展開先</h4>
-            <ul class="business-list">
-                <li><strong>ドラッグストア：</strong>スギ薬局、マツモトキヨシ</li>
-                <li><strong>アパレル：</strong>ユニクロ</li>
-                <li><strong>百貨店：</strong>伊勢丹、阪急、三越</li>
-                <li><strong>テーマパーク：</strong>TDL、TDS、USJ</li>
-                <li><strong>EC：</strong>各種モール</li>
-            </ul>
+            <div class="detailed-box">
+                <p><strong>🚚 配送体制について</strong></p>
+                <p>現在：エコ配がアンダーで対応（土日祝集荷不可のため）</p>
+                <p>今後：準備が出来次第佐川へシフト予定（エコ配には共有済み）</p>
+                <p><strong>佐川メリット：</strong>東村山中心に佐川のサポーター枠を優先的に獲得可能</p>
+                <p>対応空港：成田・羽田・関空の3ヶ所に跨って空港配送サービス構築予定</p>
+            </div>
+
+            <h4>🎯 今後の展開先（潜在顧客囲い込み）</h4>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <strong>ドラッグストア</strong><br>
+                    スギ薬局<br>
+                    マツモトキヨシ
+                </div>
+                <div class="metric-item">
+                    <strong>アパレル</strong><br>
+                    ユニクロ
+                </div>
+                <div class="metric-item">
+                    <strong>百貨店</strong><br>
+                    伊勢丹・阪急・三越
+                </div>
+                <div class="metric-item">
+                    <strong>テーマパーク</strong><br>
+                    TDL・TDS・USJ
+                </div>
+                <div class="metric-item">
+                    <strong>EC</strong><br>
+                    各種モール
+                </div>
+            </div>
 
             <div class="target-box">
-                このビジネスで30億円を目指す！
+                この事業でとりあえず2年で30億を目指す！
+            </div>
+
+            <div class="revenue-box">
+                現在の年商13億 + インバウンド30億 = 43億円達成へ
             </div>
         </div>
 
@@ -345,39 +436,126 @@
             
             <div class="partnership-box">
                 <strong>📝 ドクターズ株式会社との資本業務提携</strong><br>
-                医薬品に特化した配送サービス展開
+                提携先に物流会社がなかったため参入<br>
+                医薬品に特化した配送サービスを今後展開予定
             </div>
 
             <div class="subsection-title">💊 マンジャロ（セルフ注射薬）3PLアウトソーシング</div>
             
-            <div class="highlight">
-                <p><strong>📍 群馬県太田市・ドクターズ子会社糖尿病クリニック</strong></p>
-                <p>「すぐ薬」ECサイト運営</p>
-                <p>月間売上：2億円（400件/日）の勢い</p>
+            <div class="service-flow">
+                <h4>📍 群馬県太田市・ドクターズ子会社糖尿病クリニック</h4>
+                <p><strong>「すぐ薬」ECサイト運営</strong></p>
+                <p>月間5000万（100件/日）売上時点でクリニック内部の入出荷対応が困難に</p>
+                <p><strong>現在の状況：</strong>月間2億（400件/日）に到達する勢い</p>
+                <p><strong>現在スキーム構築中</strong></p>
             </div>
 
             <div class="calculation">
-                <p><strong>📊 メディカル物流売上想定</strong></p>
+                <p><strong>📊 マンジャロ3PL売上想定</strong></p>
+                <p>保管スペース：それほど場所を取らない想定</p>
                 <p>送料のみ：月1,000万円（クール便対応）</p>
                 <p>保管料・作業料含む：月1,500万円</p>
-                <p><span style="font-size: 1.3em; color: #e74c3c;">年間売上：約2億円</span></p>
+                <p><span style="font-size: 1.3em; color: #e74c3c;">年間売上：約2億円前後の見込み</span></p>
             </div>
 
             <div class="subsection-title">😴 SAS（睡眠時無呼吸症候群）防止サービス</div>
-            <div class="highlight">
+            <div class="detailed-box">
                 <p><strong>ドクターズ × NTT共同開発サービス</strong></p>
-                <p>運送会社向け居眠り運転防止・CPAP機器の3PL受託を狙う</p>
-                <p>提案先：丸和グループ、ネオ（導入検討中）</p>
+                <p>各運送会社への提供を斡旋</p>
+                <p><strong>現在の提案先：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>丸和グループ（提案中）</li>
+                    <li>ネオ（導入検討中）</li>
+                </ul>
+                <p><strong>背景：</strong>運送会社の居眠り運転事故の原因としてSASが考えられるケースが多い</p>
+                <p><strong>サービス内容：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>全スタッフをほぼオンライン診療完結でSAS洗い出し</li>
+                    <li>SAS治療もほぼオンライン完結</li>
+                    <li>CPAP機器の出荷・在庫保管・返却物洗浄を3PLで受託</li>
+                </ul>
+                <p><strong>拡張性：</strong>ドクターズが開発した他サービスでも機器レンタル品の入出荷保管業務が付帯している可能性が高く、掘り下げて提案を進める</p>
+            </div>
+
+            <div class="subsection-title">🚚 医薬品ラストマイル</div>
+            <div class="highlight">
+                <p><strong>配送サービス展開</strong></p>
+                <p>• 各薬局への配送（薬局ルート配送）</p>
+                <p>• 各医療機関への配送（クリニック・病院へのルート配送）</p>
+                <p><strong>＋</strong></p>
+                <p><strong>3PLの提案</strong></p>
+                <p>マンジャロ受託獲得後、ラストマイル配送領域も刈り取っていく予定</p>
             </div>
 
             <div class="subsection-title">💊 東京23区内調剤薬局3PL化プロジェクト</div>
-            <div class="highlight">
-                <p><strong>🎯 構想：小規模薬局の統合・効率化</strong></p>
-                <p>• 病院・薬局での待ち時間大幅削減</p>
-                <p>• オンライン診療・処方 → 自宅配送</p>
-                <p>• 保険証・医療証のDX化</p>
-                <p>• 薬局のデポ化（待合室なし・オンライン処方専門）</p>
-                <p><strong>💡 ドクターズ子会社 × YCT合弁会社設立構想</strong></p>
+            <div class="service-flow">
+                <h4>🎯 現状の課題</h4>
+                <p><strong>東京都心部の調剤薬局：</strong>コンビニの倍くらいの数が存在</p>
+                <p><strong>患者の現状：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>病院で長時間待って診療・会計・処方箋受取</li>
+                    <li>調剤薬局で処方箋提出・病状説明・長時間待機・再度病状説明・薬受取</li>
+                    <li>保険証（乳児医療証含む）の提出：2回</li>
+                    <li>問診票の記入：2回</li>
+                </ul>
+                
+                <h4>💡 解決策構想</h4>
+                <p><strong>オンライン化：</strong>オンライン診療・オンライン処方・自宅配送</p>
+                <p><strong>オフライン診療でも効率化：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>保険証・医療証のDX化</li>
+                    <li>問診票記入不要の運用</li>
+                    <li>病院会計後→薬局へデータ送信</li>
+                    <li>薬の服用方法をオンラインで20秒完結</li>
+                    <li>日時指定して自宅配送</li>
+                </ul>
+                
+                <h4>🏢 薬局デポ化構想</h4>
+                <p><strong>現状の小規模薬局：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>待合室：5〜10人程度の座席</li>
+                    <li>薬剤師：3〜5人配置</li>
+                    <li>時間帯によっては来客0のタイミングが多い</li>
+                </ul>
+                <p><strong>デポ化後：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>待合室なし</li>
+                    <li>医薬品保管・調剤・オンライン診療・出荷（配送）専門</li>
+                    <li>小規模薬局をまとめてオンライン処方専門の3PLデポとして運営</li>
+                </ul>
+                
+                <h4>📈 期待効果</h4>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <strong>患者メリット</strong><br>
+                        • 待ち時間大幅削減<br>
+                        • 2次感染リスク回避<br>
+                        • ストレス緩和
+                    </div>
+                    <div class="metric-item">
+                        <strong>薬剤師メリット</strong><br>
+                        • 説明業務効率化<br>
+                        • 一人当たり加算額増加<br>
+                        • 待遇・所得向上
+                    </div>
+                    <div class="metric-item">
+                        <strong>物流効率化</strong><br>
+                        • 細かい薬剤納品廃止<br>
+                        • 物流費コストダウン<br>
+                        • 保管コスト削減
+                    </div>
+                    <div class="metric-item">
+                        <strong>社会的効果</strong><br>
+                        • サラリーマン時間創出<br>
+                        • 子育て世代支援<br>
+                        • 習い事時間確保
+                    </div>
+                </div>
+            </div>
+
+            <div class="partnership-box">
+                <strong>💼 事業化構想</strong><br>
+                ドクターズの子会社設立 × YCTとの合弁会社設立を構想
             </div>
         </div>
 
@@ -386,88 +564,257 @@
             
             <div class="partnership-box">
                 <strong>🔧 イケウチ社（池内自動車）との提携進行中</strong><br>
-                軽板金塗装専門・世界トップクラスのスピード
+                軽板金塗装専門・世界トップクラスのスピードをスローガン
             </div>
 
-            <div class="highlight">
-                <p><strong>📈 イケウチ社の成長</strong></p>
-                <p>• 資金調達：5億円</p>
-                <p>• 現在：20拠点 → 来年6月：50拠点目標</p>
-                <p>• 毎月3拠点の出店ペース</p>
-                <p>• 1日平均5台の板金塗装</p>
+            <div class="detailed-box">
+                <p><strong>📈 イケウチ社の成長実績</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>直近資金調達：5億円</li>
+                    <li>出店ペース：毎月3拠点</li>
+                    <li>現在：20拠点</li>
+                    <li>来年6月目標：50拠点</li>
+                    <li>物件仕入れ・人材採用の目処：到達可能なペースで確保済み</li>
+                    <li>1日平均：5台の板金塗装</li>
+                </ul>
+                <p><strong>🎯 マッチング：</strong>軽貨物業者の板金ニーズと合致、当社で各グループ・各組合をマッチング中</p>
             </div>
 
             <div class="subsection-title">🚛 物流サービス展開</div>
-            <ul class="business-list">
-                <li><strong>引取・納車サービス：</strong>ネオ社の一般貨物許認可で営業ナンバー取得</li>
-                <li><strong>緊急対応：</strong>保険対応、カレコ・タイムズ緊急対応営業</li>
-                <li><strong>塗料3PL：</strong>即納品スキーム構築（DX化・タブレット発注システム）</li>
-            </ul>
+            <div class="service-flow">
+                <h4>🚗 引取・納車サービス</h4>
+                <p>積載車での稼働が必須 → ネオ社の一般貨物許認可にて営業ナンバー取得</p>
+                <p><strong>対応範囲拡大：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>保険対応</li>
+                    <li>カレコの緊急対応営業</li>
+                    <li>タイムズの緊急対応営業</li>
+                </ul>
+                
+                <h4>🎨 塗料3PL事業</h4>
+                <p><strong>現状の課題：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>塗料消費が激しい（1日平均5台対応）</li>
+                    <li>ロックペイント卸のタイコウのレスポンス遅延</li>
+                    <li>塗料不足現象が発生</li>
+                    <li>現状管理がアナログ</li>
+                </ul>
+                <p><strong>提案ソリューション：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>当社3PL倉庫に塗料保管</li>
+                    <li>発注即納品スキーム構築</li>
+                    <li>DX化・システム管理導入</li>
+                    <li>各店舗にタブレット設置</li>
+                    <li>飲食店メニュー方式で塗料発注</li>
+                    <li>倉庫側で出荷・配送対応</li>
+                </ul>
+            </div>
 
             <div class="target-box">
-                横展開可能性：美容室（シャンプー・リンス）、chocoZAP（ジム備品）など
+                <strong>🚀 横展開可能性</strong><br>
+                システム確立後、他業界への展開<br>
+                • 美容室（シャンプー・リンス類など）<br>
+                • chocoZAP（各ジム施設の備品など）
             </div>
         </div>
 
         <div class="section">
             <h2 class="section-title">📦 既存3PL事業の革新</h2>
             
-            <div class="subsection-title">🎯 ベンチマーク企業</div>
-            <ul class="business-list">
-                <li><strong>FBA</strong></li>
-                <li><strong>RSL</strong> ← リプレイス狙い</li>
-                <li><strong>スクロール360</strong></li>
-            </ul>
-
-            <div class="partnership-box">
-                <strong>🤝 ECコンサル会社との業務提携</strong><br>
-                楽天市場開発経験者との連携でセールスロジスティクス化
+            <div class="subsection-title">🎯 ベンチマーク企業分析</div>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <strong>FBA</strong><br>
+                    サービス内容・価格設定分析
+                </div>
+                <div class="metric-item">
+                    <strong>RSL</strong><br>
+                    リプレイス狙い
+                </div>
+                <div class="metric-item">
+                    <strong>スクロール360</strong><br>
+                    サービス内容・価格設定分析
+                </div>
+            </div>
+            
+            <div class="detailed-box">
+                <p><strong>🎯 戦略方針</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>3社のサービスを網羅</li>
+                    <li>価格帯を少し下げる</li>
+                    <li>よりカスタマーに寄り添ったサービス提供</li>
+                    <li>特にRSLのリプレイスを狙う</li>
+                </ul>
             </div>
 
-            <div class="target-box">
-                <strong>🎯 東京都心部局地戦</strong><br>
-                23区限定：1区あたり1日500件出荷達成<br>
-                → 佐川・ヤマト不使用、自社配送サービスへ移行<br>
-                共配相手：アスクルとの連携も視野
+            <div class="partnership-box">
+                <strong>🤝 ECコンサル会社との業務提携締結</strong><br>
+                楽天市場開発経験者との連携<br>
+                <strong>目標：</strong>単なる物流会社から脱却 → セールスロジスティクス化
+            </div>
+
+            <div class="service-flow">
+                <h4>📈 セールスロジスティクス戦略</h4>
+                <p><strong>従来：</strong>クライアントの商品を預かるだけの物流会社</p>
+                <p><strong>新方針：</strong>共に販路を広げ、物流量を増やすパートナー</p>
+                
+                <h4>🎯 東京都心部局地戦</h4>
+                <p><strong>戦略エリア：</strong>東京23区限定</p>
+                <p><strong>目標：</strong>1区あたり1日500件出荷達成</p>
+                <p><strong>達成後：</strong>佐川・ヤマト不使用、自社配送サービスに切り替え</p>
+                <p><strong>共配相手：</strong>アスクルとの連携も視野</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🚴 カインズ配送（大型貨物のオリジナル配送）</h2>
+            
+            <div class="detailed-box">
+                <p><strong>📍 現状のオペレーション</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>各店舗で来店納車と同等まで組み上げ</li>
+                    <li>防犯登録まで完了後、トラックに積んでtoC配送</li>
+                    <li>納品先エリアとピック店舗が遠距離・混在</li>
+                    <li>エリア跨ぎで効率が悪い状況</li>
+                </ul>
+                <p><strong>✅ 構築済み：</strong>東名阪で配送網は既に完成</p>
+            </div>
+
+            <div class="service-flow">
+                <h4>🎯 拡張戦略</h4>
+                <p><strong>混載配送の可能性：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>自転車と一緒に配送できる大型貨物</li>
+                    <li>大手運送会社が扱わない大型商品</li>
+                </ul>
+                
+                <p><strong>🏠 対象商品候補：</strong></p>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <strong>寝具</strong><br>
+                        ベッドフレーム<br>
+                        マットレス
+                    </div>
+                    <div class="metric-item">
+                        <strong>家具</strong><br>
+                        大型家具類
+                    </div>
+                    <div class="metric-item">
+                        <strong>厨房機器</strong><br>
+                        業務用設備
+                    </div>
+                    <div class="metric-item">
+                        <strong>住設機器</strong><br>
+                        キッチン設備<br>
+                        バス・トイレ機器
+                    </div>
+                </div>
+                
+                <h4>🏗️ 新築建築現場配送展開</h4>
+                <p>キッチン設備・バストイレ機器などの建築現場配送営業展開可能性</p>
+            </div>
+
+            <div class="partnership-box">
+                <h4>🎯 理想的なオペレーション構想</h4>
+                <p><strong>現状：</strong>メーカー → カインズ → 組上げ → 配送</p>
+                <p><strong>構想：</strong>メーカー → 自社倉庫 → 組上げ → 配送</p>
+                <br>
+                <p><strong>実現方法：</strong></p>
+                <ul style="margin-left: 20px; color: white;">
+                    <li>首都圏に自社倉庫設置</li>
+                    <li>メーカーから倉庫へ直納</li>
+                    <li>自社スタッフ or カインズ派遣で組上げ</li>
+                    <li>自転車組上げ〜配送まで一括受託</li>
+                </ul>
+                <br>
+                <p><strong>💰 コスト削減効果：</strong></p>
+                <ul style="margin-left: 20px; color: white;">
+                    <li>カインズのコストカット</li>
+                    <li>ピック先1箇所化で配送コスト大幅削減</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <h4>🔄 付加価値サービス</h4>
+                <p><strong>寝具分野での拡張：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>キッチン設備・バストイレ機器・寝具メーカー商品の保管〜配送受託</li>
+                    <li>不用品回収サービス（使用済み寝具）</li>
+                </ul>
+                <div class="note-box">
+                    <strong>💡 ユーザーニーズ：</strong>寝具メーカーに「今のベッドフレーム・マットレスを無料回収してもらえれば買い替えたい」という声が多数
+                </div>
+            </div>
+
+            <div class="calculation">
+                <p><strong>📈 成長目標</strong></p>
+                <p>来期：5,000万円</p>
+                <p><span style="font-size: 1.3em; color: #e74c3c;">2年目標：5億円</span></p>
+                <p><strong>位置づけ：</strong>将来の礎となる配送網として育成</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🧽 toBレンタルマット ルート交換</h2>
+            
+            <div class="detailed-box">
+                <p><strong>📍 現状のオペレーション</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>アナログ管理でクライアントからルートを組んでもらう</li>
+                    <li>配送のみを担当</li>
+                </ul>
+            </div>
+
+            <div class="service-flow">
+                <h4>🎯 拡張戦略</h4>
+                <p><strong>一括受託への移行：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>ルート組みから商品管理まで一括受託</li>
+                    <li>大幅な拡張性が期待可能</li>
+                </ul>
+                
+                <div style="margin-top: 20px; padding: 20px; background: #e8f5e8; border-radius: 10px; border: 2px solid #27ae60;">
+                    <h4 style="color: #27ae60; margin-bottom: 15px;">💡 最終構想</h4>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #2c3e50;">ダスキン領域の一括受託</p>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h2 class="section-title">💪 既存事業の拡大計画</h2>
             
-            <div class="revenue-box">
-                <div class="subsection-title" style="color: white; border: none; padding: 0; margin-bottom: 15px;">各事業の成長目標</div>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
-                    <div>
-                        <strong>🍱 Dkitchin弁当配送</strong><br>
-                        現在：年間2-3000万円<br>
-                        → <span style="font-size: 1.2em;">年間1億円へ</span>
-                    </div>
-                    <div>
-                        <strong>📦 Amazon2.0</strong><br>
-                        現在：年間1億円<br>
-                        → <span style="font-size: 1.2em;">年間3億円へ</span>
-                    </div>
-                    <div>
-                        <strong>🧽 法人マット交換</strong><br>
-                        1日30稼働体制<br>
-                        → <span style="font-size: 1.2em;">年間1.5億円へ</span>
-                    </div>
-                    <div>
-                        <strong>🚴 カインズ自転車配送</strong><br>
-                        東名阪網羅済み<br>
-                        → <span style="font-size: 1.2em;">他商材追加で最大成長期待</span>
-                    </div>
-                </div>
+            <div class="subsection-title">🍱 Dkitchin弁当配送事業</div>
+            <div class="detailed-box">
+                <p><strong>現状：</strong>年間2〜3000万円</p>
+                <p><strong>拡大計画：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>システム化を進める</li>
+                    <li>シェフコレ出店キッチンにも営業展開</li>
+                </ul>
+                <p><strong>目標：</strong>年間1億円へ</p>
+            </div>
+
+            <div class="subsection-title">📦 Amazon2.0事業</div>
+            <div class="detailed-box">
+                <p><strong>現状：</strong>年間1億円</p>
+                <p><strong>拡大要因：</strong>1事業者1エリア制限が緩和</p>
+                <p><strong>展開計画：</strong>2エリア目・3エリア目も可能に</p>
+                <p><strong>目標：</strong>年間3億円へ</p>
             </div>
 
             <div class="subsection-title">🛴 シェアモビリティメンテナンス拡大</div>
             <div class="calculation">
                 <p><strong>LUUP（10月開始）：</strong>月間1,000万円見込み</p>
-                <p><strong>カレコ：</strong>年間1億円</p>
-                <p><strong>LUUP：</strong>年間1億円</p>
+                <p><strong>年間売上構成：</strong></p>
+                <p>カレコ：年間1億円</p>
+                <p>LUUP：年間1億円</p>
                 <p><span style="font-size: 1.3em; color: #e74c3c;">メンテナンス売上合計：年間2億円</span></p>
+            </div>
+
+            <div class="subsection-title">🏢 国内ロジスティクスM&A</div>
+            <div class="partnership-box">
+                <strong>M&A成功時の追加売上：年間15億円</strong><br>
+                これにより計画では1〜2年で50億円突破可能
             </div>
         </div>
 
@@ -481,7 +828,13 @@
                     <p>現在のグループ年商：<strong>13億円</strong></p>
                     <p>+ インバウンドロジスティクス：<strong>30億円</strong></p>
                     <p>+ メディカルロジスティクス：<strong>2億円</strong></p>
-                    <p>+ 既存事業拡大分：<strong>約3億円</strong></p>
+                    <p>+ 既存事業拡大分：</p>
+                    <ul style="margin-left: 30px; list-style: disc;">
+                        <li>Dkitchin：+7000万円（2-3000万→1億）</li>
+                        <li>Amazon2.0：+2億円（1億→3億）</li>
+                        <li>法人マット交換：+約1億円（→1.5億）</li>
+                        <li>メンテナンス：+約5000万円（→2億）</li>
+                    </ul>
                     <hr style="margin: 15px 0; border: 2px solid white;">
                     <p style="font-size: 1.3em;"><strong>小計：約48億円</strong></p>
                     <br>
@@ -496,14 +849,17 @@
         <div class="section">
             <h2 class="section-title">👥 組織強化計画</h2>
             
-            <div class="highlight">
+            <div class="detailed-box">
                 <h4>💼 新規採用予定</h4>
-                <ul style="list-style: none; padding: 0;">
+                <p><strong>拡張に耐えられる体制構築のため人財採用を進める</strong></p>
+                <ul style="list-style: none; padding: 0; margin-left: 20px;">
                     <li>📊 <strong>統括経理：</strong>1名</li>
                     <li>🎯 <strong>プロジェクトリーダー：</strong>2名</li>
                     <li>👥 <strong>神戸・松永・新井の部下：</strong>2名</li>
                 </ul>
-                <p><em>※来期の売上と利益を見て配置予定</em></p>
+                <div class="note-box">
+                    <strong>※配置タイミング：</strong>来期の売上と利益を見て配置予定
+                </div>
             </div>
         </div>
 
@@ -519,15 +875,29 @@
                 </div>
             </div>
 
-            <div class="highlight">
+            <div class="service-flow">
                 <h4>📖 MVV・パーパス経営導入</h4>
-                <p>• 全スタッフが企業理念・行動指針ハンドブック携帯</p>
-                <p>• 存在意義の確認と指針に沿った行動の統括</p>
-                <p>• 組織一丸となった価値創造体制の構築</p>
+                <p><strong>実施内容：</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>全スタッフが企業理念・行動指針ハンドブック携帯</li>
+                    <li>常に当社の存在意義を確認</li>
+                    <li>指針に沿った行動を統括</li>
+                </ul>
+                <p><strong>目的：</strong>組織一丸となった価値創造体制の構築</p>
             </div>
         </div>
 
-
+        <div class="final-message" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin: 40px 0; font-size: 1.4em; font-weight: bold; box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3); animation: pulse 2s infinite;">
+            <p style="margin-bottom: 20px;">どう？</p>
+            
+            <p style="font-size: 1.3em; margin-bottom: 20px;">
+                <strong>100億なんてすぐやれそうな気がしてきたかな？</strong>
+            </p>
+            
+            <p style="font-size: 1.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                <strong>とりあえず50億なんてとっととやってしまおう。</strong>
+            </p>
+        </div>
     </div>
 </body>
 </html>
