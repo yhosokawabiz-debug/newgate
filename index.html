@@ -242,6 +242,25 @@
             text-align: center;
         }
 
+        .final-message {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+            font-size: 1.4em;
+            font-weight: bold;
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -540,9 +559,9 @@
                     </div>
                     <div class="metric-item">
                         <strong>物流効率化</strong><br>
-                        • 細かい薬剤納品廃止<br>
-                        • 物流費コストダウン<br>
-                        • 保管コスト削減
+                        • 頻繁な薬局への医薬品配送の廃止<br>
+                        • 物流コストの削減<br>
+                        • 保管スペースコストの削減
                     </div>
                     <div class="metric-item">
                         <strong>社会的効果</strong><br>
@@ -550,6 +569,79 @@
                         • 子育て世代支援<br>
                         • 習い事時間確保
                     </div>
+                </div>
+            </div>
+
+            <div class="detailed-box">
+                <h4>📝 患者体験の詳細分析</h4>
+                <p><strong>現在の非効率な流れ：</strong></p>
+                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #ffc107;">
+                    <p><strong>病院での体験：</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li>長時間待って診療を受ける</li>
+                        <li>長時間待って会計と処方箋を受け取る</li>
+                        <li>保険証（乳児医療証なども含む）の提出：1回目</li>
+                        <li>問診票の記入：1回目</li>
+                    </ul>
+                    
+                    <p><strong>調剤薬局での体験：</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li>処方箋を持って調剤薬局を選択</li>
+                        <li>処方箋を提出し、再度病状説明</li>
+                        <li>保険証（乳児医療証なども含む）の提出：2回目</li>
+                        <li>問診票の記入：2回目</li>
+                        <li>長時間待って処方される</li>
+                        <li>処方時にまた再度病状説明を受ける</li>
+                        <li>薬が処方される</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <h4>🌟 具体的な社会的インパクト</h4>
+                
+                <p><strong>🕐 忙しいサラリーマン・エグゼクティブ層の時間革命：</strong></p>
+                <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <ul style="margin-left: 20px;">
+                        <li>病院・薬局での長時間待機から完全解放</li>
+                        <li>平日の貴重な昼休みや有給時間を有効活用</li>
+                        <li>通院のための早退・遅刻が不要に</li>
+                        <li>重要な会議やプロジェクトに集中できる時間の確保</li>
+                        <li>待ち時間のストレスによる仕事への悪影響を排除</li>
+                    </ul>
+                </div>
+                
+                <p><strong>👨‍👩‍👧‍👦 子育て世代・パパママの1日タイムスケジュール革命：</strong></p>
+                <div style="background: #f3e5f5; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <ul style="margin-left: 20px;">
+                        <li><strong>診療後の時間活用：</strong>診療後すぐに夕飯の買い物にスーパーへ直行可能</li>
+                        <li><strong>習い事への対応：</strong>午後や夕方の子供の習い事（ピアノ、水泳、塾など）に間に合う</li>
+                        <li><strong>お迎え時間の確保：</strong>保育園・幼稚園のお迎え時間までの貴重な時間を有効活用</li>
+                        <li><strong>家族時間の増加：</strong>待ち時間がなくなることで家族との時間を大幅に増加</li>
+                        <li><strong>共働き世帯支援：</strong>平日のタイムマネジメントが劇的に改善</li>
+                        <li><strong>子供のストレス軽減：</strong>幼い子供を連れての長時間待機ストレスから解放</li>
+                        <li><strong>急な発熱対応：</strong>子供の急な体調不良時も迅速に薬を自宅で受け取り可能</li>
+                    </ul>
+                </div>
+                
+                <p><strong>🏥 医療環境・社会全体への波及効果：</strong></p>
+                <div style="background: #e8f5e8; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <ul style="margin-left: 20px;">
+                        <li>待合室での2次感染被害の完全防止</li>
+                        <li>高齢者や免疫力の弱い方の感染リスク大幅軽減</li>
+                        <li>インフルエンザ・コロナ等の流行期での安全な薬受取</li>
+                        <li>薬局の混雑緩和による全体的な医療サービス向上</li>
+                    </ul>
+                </div>
+                
+                <p><strong>💼 薬剤師の働き方・キャリア向上：</strong></p>
+                <div style="background: #fff8e1; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <ul style="margin-left: 20px;">
+                        <li>服用方法の説明業務が効率化され、より専門的業務に集中</li>
+                        <li>薬剤師一人当たりの加算額が増加</li>
+                        <li>待遇や所得の上昇</li>
+                        <li>薬歴管理や服薬指導の質的向上</li>
+                    </ul>
                 </div>
             </div>
 
@@ -615,54 +707,6 @@
                 システム確立後、他業界への展開<br>
                 • 美容室（シャンプー・リンス類など）<br>
                 • chocoZAP（各ジム施設の備品など）
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">📦 既存3PL事業の革新</h2>
-            
-            <div class="subsection-title">🎯 ベンチマーク企業分析</div>
-            <div class="metrics-grid">
-                <div class="metric-item">
-                    <strong>FBA</strong><br>
-                    サービス内容・価格設定分析
-                </div>
-                <div class="metric-item">
-                    <strong>RSL</strong><br>
-                    リプレイス狙い
-                </div>
-                <div class="metric-item">
-                    <strong>スクロール360</strong><br>
-                    サービス内容・価格設定分析
-                </div>
-            </div>
-            
-            <div class="detailed-box">
-                <p><strong>🎯 戦略方針</strong></p>
-                <ul style="margin-left: 20px;">
-                    <li>3社のサービスを網羅</li>
-                    <li>価格帯を少し下げる</li>
-                    <li>よりカスタマーに寄り添ったサービス提供</li>
-                    <li>特にRSLのリプレイスを狙う</li>
-                </ul>
-            </div>
-
-            <div class="partnership-box">
-                <strong>🤝 ECコンサル会社との業務提携締結</strong><br>
-                楽天市場開発経験者との連携<br>
-                <strong>目標：</strong>単なる物流会社から脱却 → セールスロジスティクス化
-            </div>
-
-            <div class="service-flow">
-                <h4>📈 セールスロジスティクス戦略</h4>
-                <p><strong>従来：</strong>クライアントの商品を預かるだけの物流会社</p>
-                <p><strong>新方針：</strong>共に販路を広げ、物流量を増やすパートナー</p>
-                
-                <h4>🎯 東京都心部局地戦</h4>
-                <p><strong>戦略エリア：</strong>東京23区限定</p>
-                <p><strong>目標：</strong>1区あたり1日500件出荷達成</p>
-                <p><strong>達成後：</strong>佐川・ヤマト不使用、自社配送サービスに切り替え</p>
-                <p><strong>共配相手：</strong>アスクルとの連携も視野</p>
             </div>
         </div>
 
@@ -819,6 +863,54 @@
         </div>
 
         <div class="section">
+            <h2 class="section-title">📦 既存3PL事業の革新</h2>
+            
+            <div class="subsection-title">🎯 ベンチマーク企業分析</div>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <strong>FBA</strong><br>
+                    サービス内容・価格設定分析
+                </div>
+                <div class="metric-item">
+                    <strong>RSL</strong><br>
+                    リプレイス狙い
+                </div>
+                <div class="metric-item">
+                    <strong>スクロール360</strong><br>
+                    サービス内容・価格設定分析
+                </div>
+            </div>
+            
+            <div class="detailed-box">
+                <p><strong>🎯 戦略方針</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>3社のサービスを網羅</li>
+                    <li>価格帯を少し下げる</li>
+                    <li>よりカスタマーに寄り添ったサービス提供</li>
+                    <li>特にRSLのリプレイスを狙う</li>
+                </ul>
+            </div>
+
+            <div class="partnership-box">
+                <strong>🤝 ECコンサル会社との業務提携締結</strong><br>
+                楽天市場開発経験者との連携<br>
+                <strong>目標：</strong>単なる物流会社から脱却 → セールスロジスティクス化
+            </div>
+
+            <div class="service-flow">
+                <h4>📈 セールスロジスティクス戦略</h4>
+                <p><strong>従来：</strong>クライアントの商品を預かるだけの物流会社</p>
+                <p><strong>新方針：</strong>共に販路を広げ、物流量を増やすパートナー</p>
+                
+                <h4>🎯 東京都心部局地戦</h4>
+                <p><strong>戦略エリア：</strong>東京23区限定</p>
+                <p><strong>目標：</strong>1区あたり1日500件出荷達成</p>
+                <p><strong>達成後：</strong>佐川・ヤマト不使用、自社配送サービスに切り替え</p>
+                <p><strong>共配相手：</strong>アスクルとの連携も視野</p>
+            </div>
+        </div>
+
+        <div class="section">
             <h2 class="section-title">🎯 売上達成ロードマップ</h2>
             
             <div class="revenue-box">
@@ -887,14 +979,16 @@
             </div>
         </div>
 
-        <div class="final-message" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin: 40px 0; font-size: 1.4em; font-weight: bold; box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3); animation: pulse 2s infinite;">
-            <p style="margin-bottom: 20px;">どう？</p>
+        <div class="final-message">
+            <p style="font-size: 1.4em; margin-bottom: 20px;">
+                <strong>どう？</strong>
+            </p>
             
-            <p style="font-size: 1.3em; margin-bottom: 20px;">
+            <p style="font-size: 1.4em; margin-bottom: 20px;">
                 <strong>100億なんてすぐやれそうな気がしてきたかな？</strong>
             </p>
             
-            <p style="font-size: 1.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+            <p style="font-size: 1.4em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
                 <strong>とりあえず50億なんてとっととやってしまおう。</strong>
             </p>
         </div>
