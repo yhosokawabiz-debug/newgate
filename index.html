@@ -3,360 +3,538 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社ワイシーティー 今後の戦略</title>
+    <title>株式会社ワイシーティー 事業計画書</title>
     <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+            padding: 20px;
         }
+
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 40px;
             text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
+
         .header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header .subtitle {
+            font-size: 1.4em;
+            color: #7f8c8d;
             font-weight: 300;
         }
-        .header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.8;
-            margin-top: 10px;
-        }
-        .content {
-            padding: 40px;
-        }
-        .current-status {
-            background: #e8f5e8;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border-left: 5px solid #27ae60;
-        }
+
         .section {
-            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .section h2 {
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            font-size: 2.2em;
             color: #2c3e50;
+            margin-bottom: 20px;
             border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
-            font-size: 1.8em;
         }
-        .section h3 {
+
+        .subsection-title {
+            font-size: 1.6em;
             color: #34495e;
-            margin-top: 25px;
-            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
         }
-        .highlight-box {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
+
         .revenue-box {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.3em;
             font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
-        .strategy-list {
+
+        .current-status {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .target-box {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.4em;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(255, 154, 158, 0.3);
+        }
+
+        .business-list {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
         }
-        .strategy-list li {
+
+        .business-list li {
             background: #f8f9fa;
             margin: 10px 0;
             padding: 15px;
-            border-left: 4px solid #3498db;
-            border-radius: 5px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
         }
+
+        .business-list li:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
         .store-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            margin: 15px 0;
+            gap: 15px;
+            margin: 20px 0;
         }
+
         .store-item {
-            background: #f1f2f6;
-            padding: 10px;
-            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
             font-weight: bold;
+            transition: all 0.3s ease;
         }
-        .future-vision {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+
+        .store-item:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .partnership-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .calculation {
+            background: #f1c40f;
+            color: #2c3e50;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
             color: white;
             padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            margin-top: 40px;
-            border-radius: 15px;
-        }
-        .partnership {
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 5px solid #2196f3;
-        }
-        .number-highlight {
-            color: #e74c3c;
+            margin: 40px 0;
+            font-size: 1.4em;
             font-weight: bold;
-            font-size: 1.1em;
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
+            animation: pulse 2s infinite;
         }
+
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.02); }
             100% { transform: scale(1); }
         }
-        .pulse-text {
-            animation: pulse 2s infinite;
+
+        .highlight {
+            background: #fffbf0;
+            padding: 20px;
+            border-left: 5px solid #f39c12;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .growth-path {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .growth-step {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 10px;
+            flex: 1;
+            min-width: 150px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 2em;
+            color: #3498db;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .store-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .growth-path {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>株式会社ワイシーティー</h1>
-            <div class="subtitle">今後の戦略 〜30億への駆け抜け〜</div>
+            <h1>📈 株式会社ワイシーティー事業計画書</h1>
+            <div class="subtitle">～ニューゲート株式会社への飛躍～</div>
         </div>
-        
-        <div class="content">
-            <div class="current-status">
-                <h2>現状</h2>
-                <p><strong>4つの主力事業で年商10億円を達成</strong></p>
-                <ul>
-                    <li>①ラストマイルロジスティクス</li>
-                    <li>②3PLロジスティクス</li>
-                    <li>③シェアモビリティメンテナンス</li>
-                    <li>④ハウスクリーニング</li>
-                </ul>
-                <p><strong>子会社のネオを含めてグループ年商<span class="number-highlight">13億円</span></strong></p>
-                <p><strong>目標：まずは<span class="number-highlight">30億円</span>まで駆け抜ける</strong></p>
-            </div>
 
-            <div class="section">
-                <h2>🌟 新規事業展開</h2>
-                
-                <h3>インバウンドロジスティクス</h3>
-                <div class="partnership">
-                    <strong>HFT社（ハンズフリートラベル社）と資本業務提携締結</strong>
+        <div class="current-status">
+            <h2 style="margin-bottom: 15px;">🎯 現状と目標</h2>
+            <div class="growth-path">
+                <div class="growth-step">
+                    <div>現在</div>
+                    <div style="font-size: 1.5em;">13億円</div>
+                    <small>（YCT 10億 + ネオ 3億）</small>
                 </div>
-                
-                <h4>フリーゴー空港配送サービスの仕組み</h4>
-                <ul>
-                    <li>インバウンドユーザーがアプリ/ブラウザで登録（メール・パスポート・帰り便情報）</li>
-                    <li>マイQR付与</li>
-                    <li>店舗でQRをかざすだけで伝票出力・荷物預け</li>
-                    <li>帰り便の4時間前から各カウンターで受け取り可能</li>
-                </ul>
-                
-                <strong>受け取りカウンター</strong>
-                <ul class="strategy-list">
-                    <li>JALエービーシーカウンター</li>
-                    <li>コウノイケエアポートサービスカウンター</li>
-                    <li>各空港内ドンキホーテ店舗（ドンキユーザーのみ）</li>
-                </ul>
-                
-                <h4>ドンキホーテ展開</h4>
-                <p><strong>10月全店舗導入予定</strong></p>
-                <div class="store-list">
-                    <div class="store-item">渋谷本店</div>
-                    <div class="store-item">銀座本館</div>
-                    <div class="store-item">浅草店</div>
-                    <div class="store-item">新宿店</div>
-                    <div class="store-item">新宿東南口別館</div>
+                <div class="arrow">→</div>
+                <div class="growth-step">
+                    <div>第一目標</div>
+                    <div style="font-size: 1.5em;">30億円</div>
                 </div>
-                
-                <div class="revenue-box">
-                    <p>免税カウンターPOSデータ上でレジ通過7.5%が利用想定</p>
-                    <p>東京：<span class="number-highlight">1,200件/日</span></p>
-                    <p>関西5店舗追加で東西合計：<span class="number-highlight">2,500件/日</span></p>
-                    <p>YCT受託料金：<span class="number-highlight">1件900円（税別）</span></p>
-                    <p>月間<span class="number-highlight">6,500〜7,000万円</span></p>
-                    <p>年間<span class="number-highlight">8億〜10億円</span>の可能性</p>
+                <div class="arrow">→</div>
+                <div class="growth-step">
+                    <div>中期目標</div>
+                    <div style="font-size: 1.5em;">50億円</div>
                 </div>
-                
-                <h4>今後の展開予定</h4>
-                <div class="highlight-box">
-                    <strong>潜在顧客の囲い込み</strong>
-                    <ul>
-                        <li><strong>ドラッグストア：</strong>スギ薬局、マツモトキヨシ</li>
-                        <li><strong>アパレル：</strong>ユニクロ</li>
-                        <li><strong>百貨店：</strong>伊勢丹、阪急、三越</li>
-                        <li><strong>テーマパーク：</strong>TDL、TDS、USJ</li>
-                        <li><strong>EC：</strong>各モール</li>
-                    </ul>
-                    <p><strong>このビジネスで30億円を目指す</strong></p>
-                </div>
-                
-                <div class="highlight-box">
-                    <strong>物流パートナーの変更</strong>
-                    <p>現在：エコ配（土日祝集荷不可のため）→ <strong>佐川急便へシフト予定</strong></p>
-                    <p>メリット：東村山中心に佐川のサポーター枠を優先的に確保可能</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3>メディカルロジスティクス</h3>
-                <div class="partnership">
-                    <strong>ドクターズ株式会社と資本業務提携締結</strong><br>
-                    医薬品に特化した配送サービス展開予定
-                </div>
-                
-                <h4>マンジャロ（セルフ注射薬）3PLアウトソーシング</h4>
-                <div class="revenue-box">
-                    <p>群馬県太田市のドクターズ子会社糖尿病クリニック「すぐ薬」ECサイト</p>
-                    <p>現在：月間<span class="number-highlight">2億円</span>（400件/日）の勢い</p>
-                    <p>送料のみで月<span class="number-highlight">1,000万円</span>想定（クール便）</p>
-                    <p>保管料・作業料含めて月間<span class="number-highlight">1,500万円</span></p>
-                    <p>年間<span class="number-highlight">2億円前後</span>の見込み</p>
-                </div>
-                
-                <h4>SAS（睡眠時無呼吸症候群）防止サービス</h4>
-                <ul class="strategy-list">
-                    <li>ドクターズ×NTT共同開発サービス</li>
-                    <li>各運送会社への提供斡旋（丸和グループへ提案中、ネオも導入検討中）</li>
-                    <li>CPAPという医療機器の在庫保管・返却物洗浄業務の3PL受託を狙う</li>
-                    <li>運送会社の居眠り運転事故防止ニーズが高まっている</li>
-                </ul>
-                
-                <h4>東京23区内調剤薬局3PL化プロジェクト（構想中）</h4>
-                <div class="highlight-box">
-                    <strong>現状の課題</strong>
-                    <ul>
-                        <li>都心部にコンビニの倍の数の調剤薬局が存在</li>
-                        <li>患者は病院・薬局で二重の待ち時間</li>
-                        <li>保険証提出2回、問診票記入2回の非効率</li>
-                    </ul>
-                    
-                    <strong>解決策</strong>
-                    <ul>
-                        <li>オンライン診療・オンライン処方・自宅配送サービス</li>
-                        <li>小規模薬局をまとめてオンライン処方専門デポ化</li>
-                        <li>待合室なしの3PLデポとして運営</li>
-                        <li>薬剤師の効率化と待遇向上</li>
-                        <li>物流費・保管コストの削減</li>
-                    </ul>
-                    
-                    <p><strong>ドクターズ子会社設立 × YCT合弁会社として構想</strong></p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3>イケウチ社（池内自動車）との資本業務提携（水面下）</h3>
-                <div class="partnership">
-                    <strong>世界トップクラススピードの軽板金塗装専門</strong><br>
-                    資金調達5億円、毎月3拠点出店実行中<br>
-                    現在20拠点 → 来年6月時点で50拠点目標
-                </div>
-                
-                <h4>事業連携内容</h4>
-                <ul class="strategy-list">
-                    <li><strong>軽貨物業者板金マッチング：</strong>各グループ・組合とのマッチング</li>
-                    <li><strong>引取・納車サービス：</strong>ネオ社の一般貨物許認可で営業ナンバー取得</li>
-                    <li><strong>保険対応：</strong>カレコ・タイムズの緊急対応営業</li>
-                </ul>
-                
-                <h4>塗料供給3PLサービス</h4>
-                <div class="highlight-box">
-                    <p><strong>現状：</strong>1日平均5台の板金塗装で塗料消費激しい</p>
-                    <p><strong>課題：</strong>ロックペイント卸のタイコウのレスポンス遅延</p>
-                    <p><strong>解決策：</strong>YCT 3PL倉庫に保管、発注即納品スキーム</p>
-                    <p><strong>システム：</strong>各店舗タブレット設置、飲食店メニュー方式で発注</p>
-                    <p><strong>横展開可能性：</strong>美容室（シャンプー・リンス）、チョコザップ（ジム備品）など</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>📈 既存事業の拡張</h2>
-                
-                <h3>3PL事業の変革</h3>
-                <div class="highlight-box">
-                    <strong>ベンチマーク3社</strong>
-                    <ul>
-                        <li>FBA</li>
-                        <li>RSL（リプレイス狙い）</li>
-                        <li>スクロール360</li>
-                    </ul>
-                    <p>3社のサービスを網羅、価格を少し下げ、よりカスタマーに寄り添ったサービス提供</p>
-                </div>
-                
-                <div class="partnership">
-                    <strong>楽天市場開発経験ECコンサル会社と業務提携締結</strong><br>
-                    預かるだけでなく、共に販路を広げるセールスロジスティクスへ
-                </div>
-                
-                <h4>東京都心部局地戦略</h4>
-                <div class="revenue-box">
-                    <p><strong>23区限定：</strong>1区あたり1日500件出荷達成で自社配送サービスへ切り替え</p>
-                    <p><strong>共配相手：</strong>アスクルも視野</p>
-                </div>
-                
-                <h3>既存事業の成長目標</h3>
-                <ul class="strategy-list">
-                    <li><strong>Dkitchin（お弁当配送）：</strong>年間2〜3,000万 → 1億円（シェフコレ展開）</li>
-                    <li><strong>Amazon 2.0：</strong>年間1億 → 3億円（2エリア目、3エリア目展開）</li>
-                    <li><strong>法人マット交換：</strong>1日30稼働体制で年間1.5億円</li>
-                    <li><strong>LUUP（10月開始）：</strong>月間1,000万円想定</li>
-                    <li><strong>メンテナンス合計：</strong>カレコ1億円 + LUUP 1億円 = 2億円</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>💰 売上目標</h2>
-                <div class="revenue-box">
-                    <p><strong>現在：</strong>13億円</p>
-                    <p><strong>インバウンドロジスティクス：</strong>+30億円</p>
-                    <p><strong>合計：</strong>43億円</p>
-                    <p><strong>メディカルロジスティクス肉付け</strong></p>
-                    <p><strong>国内ロジスティクスM&A成功時：</strong>+15億円</p>
-                    <p><strong>最終目標：</strong><span class="number-highlight">50億円突破（1〜2年で）</span></p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>👥 人材採用計画</h2>
-                <p>50億円規模に対応するための組織体制強化</p>
-                <ul class="strategy-list">
-                    <li><strong>統括経理：</strong>1名</li>
-                    <li><strong>プロジェクトリーダー：</strong>2名</li>
-                    <li><strong>神戸・松永・新井の部下：</strong>2名</li>
-                </ul>
-                <p>来期の売上と利益を見て配置予定</p>
-            </div>
-
-            <div class="section">
-                <h2>🚀 社名変更・企業変革</h2>
-                <div class="highlight-box">
-                    <p><strong>株式会社ワイシーティー → ニューゲート株式会社</strong></p>
-                    <p><strong>MVV・パーパス経営導入</strong></p>
-                    <p>全スタッフが企業理念・行動指針記載ハンドブック携帯</p>
-                    <p>常に存在意義確認、指針に沿った行動の統括</p>
+                <div class="arrow">→</div>
+                <div class="growth-step">
+                    <div>最終目標</div>
+                    <div style="font-size: 2em; color: #e74c3c;">100億円</div>
                 </div>
             </div>
         </div>
 
-        <div class="future-vision">
-            <h2 style="font-size: 2.8em; margin-bottom: 25px; border: none; color: white;">🔥 どうだ？みんな。</h2>
-            <p style="font-size: 2em; font-weight: bold; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); line-height: 1.4; margin-bottom: 30px;">100億やれそうな気がしてきただろ？</p>
-            <p class="pulse-text" style="font-size: 2.2em; font-weight: bold; margin-top: 30px;">さあやろうか。</p>
+        <div class="section">
+            <h2 class="section-title">🏢 既存4事業（年商10億達成済み）</h2>
+            <ul class="business-list">
+                <li>① <strong>ラストマイルロジスティクス</strong></li>
+                <li>② <strong>3PLロジスティクス</strong></li>
+                <li>③ <strong>シェアモビリティメンテナンス</strong></li>
+                <li>④ <strong>ハウスクリーニング</strong></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🚀 新規事業展開</h2>
+            
+            <div class="subsection-title">🌏 インバウンドロジスティクス</div>
+            
+            <div class="partnership-box">
+                <strong>📝 HFT社（ハンズフリートラベル社）との資本業務提携</strong><br>
+                「フリーゴー」空港配送サービスの物流を包括的にマネジメント
+            </div>
+
+            <div class="highlight">
+                <h4>📱 サービスの仕組み</h4>
+                <p>1. インバウンドユーザーがアプリ・ブラウザで登録（メール、パスポート、帰り便情報）</p>
+                <p>2. マイQRコード付与</p>
+                <p>3. 導入店舗でQRをかざして荷物預託</p>
+                <p>4. 帰り便4時間前から空港カウンターで受け取り</p>
+            </div>
+
+            <h4>🏪 導入店舗（10月展開予定）</h4>
+            <div class="store-list">
+                <div class="store-item">ドンキ渋谷本店</div>
+                <div class="store-item">ドンキ銀座本館</div>
+                <div class="store-item">ドンキ浅草店</div>
+                <div class="store-item">ドンキ新宿店</div>
+                <div class="store-item">ドンキ新宿東南口別館</div>
+            </div>
+
+            <div class="calculation">
+                <p><strong>📊 売上想定（ドンキのみ）</strong></p>
+                <p>東京：1,200件/日 × 関西：1,300件/日 = 合計2,500件/日</p>
+                <p>受託料金：900円（税別）/件</p>
+                <p><span style="font-size: 1.3em; color: #e74c3c;">月間売上：6,500〜7,000万円</span></p>
+                <p><span style="font-size: 1.5em; color: #c0392b;">年間売上：8〜10億円の可能性！</span></p>
+            </div>
+
+            <h4>🎯 今後の展開先</h4>
+            <ul class="business-list">
+                <li><strong>ドラッグストア：</strong>スギ薬局、マツモトキヨシ</li>
+                <li><strong>アパレル：</strong>ユニクロ</li>
+                <li><strong>百貨店：</strong>伊勢丹、阪急、三越</li>
+                <li><strong>テーマパーク：</strong>TDL、TDS、USJ</li>
+                <li><strong>EC：</strong>各種モール</li>
+            </ul>
+
+            <div class="target-box">
+                このビジネスで30億円を目指す！
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏥 メディカルロジスティクス</h2>
+            
+            <div class="partnership-box">
+                <strong>📝 ドクターズ株式会社との資本業務提携</strong><br>
+                医薬品に特化した配送サービス展開
+            </div>
+
+            <div class="subsection-title">💊 マンジャロ（セルフ注射薬）3PLアウトソーシング</div>
+            
+            <div class="highlight">
+                <p><strong>📍 群馬県太田市・ドクターズ子会社糖尿病クリニック</strong></p>
+                <p>「すぐ薬」ECサイト運営</p>
+                <p>月間売上：2億円（400件/日）の勢い</p>
+            </div>
+
+            <div class="calculation">
+                <p><strong>📊 メディカル物流売上想定</strong></p>
+                <p>送料のみ：月1,000万円（クール便対応）</p>
+                <p>保管料・作業料含む：月1,500万円</p>
+                <p><span style="font-size: 1.3em; color: #e74c3c;">年間売上：約2億円</span></p>
+            </div>
+
+            <div class="subsection-title">😴 SAS（睡眠時無呼吸症候群）防止サービス</div>
+            <div class="highlight">
+                <p><strong>ドクターズ × NTT共同開発サービス</strong></p>
+                <p>運送会社向け居眠り運転防止・CPAP機器の3PL受託を狙う</p>
+                <p>提案先：丸和グループ、ネオ（導入検討中）</p>
+            </div>
+
+            <div class="subsection-title">💊 東京23区内調剤薬局3PL化プロジェクト</div>
+            <div class="highlight">
+                <p><strong>🎯 構想：小規模薬局の統合・効率化</strong></p>
+                <p>• 病院・薬局での待ち時間大幅削減</p>
+                <p>• オンライン診療・処方 → 自宅配送</p>
+                <p>• 保険証・医療証のDX化</p>
+                <p>• 薬局のデポ化（待合室なし・オンライン処方専門）</p>
+                <p><strong>💡 ドクターズ子会社 × YCT合弁会社設立構想</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🚗 池内自動車との資本業務提携</h2>
+            
+            <div class="partnership-box">
+                <strong>🔧 イケウチ社（池内自動車）との提携進行中</strong><br>
+                軽板金塗装専門・世界トップクラスのスピード
+            </div>
+
+            <div class="highlight">
+                <p><strong>📈 イケウチ社の成長</strong></p>
+                <p>• 資金調達：5億円</p>
+                <p>• 現在：20拠点 → 来年6月：50拠点目標</p>
+                <p>• 毎月3拠点の出店ペース</p>
+                <p>• 1日平均5台の板金塗装</p>
+            </div>
+
+            <div class="subsection-title">🚛 物流サービス展開</div>
+            <ul class="business-list">
+                <li><strong>引取・納車サービス：</strong>ネオ社の一般貨物許認可で営業ナンバー取得</li>
+                <li><strong>緊急対応：</strong>保険対応、カレコ・タイムズ緊急対応営業</li>
+                <li><strong>塗料3PL：</strong>即納品スキーム構築（DX化・タブレット発注システム）</li>
+            </ul>
+
+            <div class="target-box">
+                横展開可能性：美容室（シャンプー・リンス）、chocoZAP（ジム備品）など
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📦 既存3PL事業の革新</h2>
+            
+            <div class="subsection-title">🎯 ベンチマーク企業</div>
+            <ul class="business-list">
+                <li><strong>FBA</strong></li>
+                <li><strong>RSL</strong> ← リプレイス狙い</li>
+                <li><strong>スクロール360</strong></li>
+            </ul>
+
+            <div class="partnership-box">
+                <strong>🤝 ECコンサル会社との業務提携</strong><br>
+                楽天市場開発経験者との連携でセールスロジスティクス化
+            </div>
+
+            <div class="target-box">
+                <strong>🎯 東京都心部局地戦</strong><br>
+                23区限定：1区あたり1日500件出荷達成<br>
+                → 佐川・ヤマト不使用、自社配送サービスへ移行<br>
+                共配相手：アスクルとの連携も視野
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💪 既存事業の拡大計画</h2>
+            
+            <div class="revenue-box">
+                <div class="subsection-title" style="color: white; border: none; padding: 0; margin-bottom: 15px;">各事業の成長目標</div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
+                    <div>
+                        <strong>🍱 Dkitchin弁当配送</strong><br>
+                        現在：年間2-3000万円<br>
+                        → <span style="font-size: 1.2em;">年間1億円へ</span>
+                    </div>
+                    <div>
+                        <strong>📦 Amazon2.0</strong><br>
+                        現在：年間1億円<br>
+                        → <span style="font-size: 1.2em;">年間3億円へ</span>
+                    </div>
+                    <div>
+                        <strong>🧽 法人マット交換</strong><br>
+                        1日30稼働体制<br>
+                        → <span style="font-size: 1.2em;">年間1.5億円へ</span>
+                    </div>
+                    <div>
+                        <strong>🚴 カインズ自転車配送</strong><br>
+                        東名阪網羅済み<br>
+                        → <span style="font-size: 1.2em;">他商材追加で最大成長期待</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection-title">🛴 シェアモビリティメンテナンス拡大</div>
+            <div class="calculation">
+                <p><strong>LUUP（10月開始）：</strong>月間1,000万円見込み</p>
+                <p><strong>カレコ：</strong>年間1億円</p>
+                <p><strong>LUUP：</strong>年間1億円</p>
+                <p><span style="font-size: 1.3em; color: #e74c3c;">メンテナンス売上合計：年間2億円</span></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎯 売上達成ロードマップ</h2>
+            
+            <div class="revenue-box">
+                <div style="font-size: 1.5em; margin-bottom: 20px;">📊 売上積み上げ計算</div>
+                
+                <div style="text-align: left; font-size: 1.1em;">
+                    <p>現在のグループ年商：<strong>13億円</strong></p>
+                    <p>+ インバウンドロジスティクス：<strong>30億円</strong></p>
+                    <p>+ メディカルロジスティクス：<strong>2億円</strong></p>
+                    <p>+ 既存事業拡大分：<strong>約3億円</strong></p>
+                    <hr style="margin: 15px 0; border: 2px solid white;">
+                    <p style="font-size: 1.3em;"><strong>小計：約48億円</strong></p>
+                    <br>
+                    <p>+ 国内ロジスティクスM&A成功時：<strong>15億円</strong></p>
+                    <hr style="margin: 15px 0; border: 3px solid white;">
+                    <p style="font-size: 1.5em; color: #f1c40f;"><strong>合計：約63億円</strong></p>
+                    <p style="font-size: 1.2em;">→ <strong>1〜2年で50億円突破可能！</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">👥 組織強化計画</h2>
+            
+            <div class="highlight">
+                <h4>💼 新規採用予定</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li>📊 <strong>統括経理：</strong>1名</li>
+                    <li>🎯 <strong>プロジェクトリーダー：</strong>2名</li>
+                    <li>👥 <strong>神戸・松永・新井の部下：</strong>2名</li>
+                </ul>
+                <p><em>※来期の売上と利益を見て配置予定</em></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏢 社名変更・企業理念刷新</h2>
+            
+            <div class="partnership-box">
+                <h3 style="margin-bottom: 15px;">🔄 社名変更予定</h3>
+                <div style="font-size: 1.2em;">
+                    <strong>株式会社ワイシーティー</strong><br>
+                    ↓<br>
+                    <strong style="font-size: 1.4em;">ニューゲート株式会社</strong>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <h4>📖 MVV・パーパス経営導入</h4>
+                <p>• 全スタッフが企業理念・行動指針ハンドブック携帯</p>
+                <p>• 存在意義の確認と指針に沿った行動の統括</p>
+                <p>• 組織一丸となった価値創造体制の構築</p>
+            </div>
+        </div>
+
+        <div class="final-message">
+            <p style="font-size: 1.4em; margin-bottom: 20px;">
+                <strong>みんな100億位やれそうな気がしてきたかな？</strong>
+            </p>
+            
+            <p style="font-size: 1.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                <strong>とっととやっちゃおうか。</strong>
+            </p>
         </div>
     </div>
 </body>
